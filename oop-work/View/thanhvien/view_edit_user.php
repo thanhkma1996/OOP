@@ -20,7 +20,7 @@
 
               <tr>
                 <td> date : </td>
-                <td><input type="text" name="date_user" value="<?php echo $data["date"]; ?>"></td>
+                <td><input type="date" name="date_user" value="<?php echo $data["date"]; ?>"></td>
               </tr>
 
               <tr>
@@ -30,7 +30,7 @@
 
               <tr>
                   <td></td>
-                  <td><input type="submit" name="edit_user" value="sua"></td>
+                  <td><input type="submit" name="update_user" value="sua"></td>
               </tr>
           </table>
       </form>

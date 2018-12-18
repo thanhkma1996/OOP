@@ -20,8 +20,12 @@
       case 'list':
          include('Controller/controller_list.php');
          break;
+      case 'tim-kiem':
+        include('Controller/controller_search.php');
+        break;
         default :
         include('View/thanhvien/layout.php');
+
 
     }
 

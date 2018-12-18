@@ -89,7 +89,7 @@
 
     // phuowng thuc sua dl
 
-    public function editData($name,$date,$country) {
+    public function updateData($id,$name,$date,$country) {
         $sql = "update thanhvien set name='$name',date='$date',country='$country' where id='$id'";
         return $this->execute($sql);
     }
@@ -99,9 +99,23 @@
 
     public function delete($id,$table) {
       $sql = "delete from $table where id='$id'";
-      return $this->excute($sql);
+      return $this->execute($sql);
     }
 
+    // phuong thuc tim kiem
+    public function SearchData($table,$key){
+      $sql = "select * from $table where name REGEXP '$key' order by id desc";
+      $this->execute($sql);
+      if($this->num_rows() == 0){
+        $data = 0;
+      }
+      else {
+        while($datas = $this->getData()){
+          $data[] = $datas;
+        }
+      }
+       return $data;
+    }
 
   }
 

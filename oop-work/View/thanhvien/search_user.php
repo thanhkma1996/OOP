@@ -27,7 +27,7 @@
       </thead>
       <tbody>
         <?php
-              foreach ($data as $datas) {
+              foreach ($data_search as $datas) {
         ?>
         <tr>
           <td><?php echo $datas['id']; ?></td>
@@ -42,5 +42,6 @@
         </tr>
       </tbody>
     </table>
+      <a href="index.php?controller=thanh-vien&action=list"> Trang chu </a>
   </form>
 </div>

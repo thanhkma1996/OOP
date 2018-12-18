@@ -9,25 +9,24 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <?php
-            include('Model/db-config.php');
-            $db = new Database;
-            $db->connect();
+  <?php
+          include('Model/db-config.php');
+          $db = new Database;
+          $db->connect();
 
-            if(isset($_GET['controller'])){
-              $controller = $_GET['controller'];
-            }
-            else {
-              $controller = '';
-            }
+          if(isset($_GET['controller'])){
+            $controller = $_GET['controller'];
+          }
+          else {
+            $controller = '';
+          }
 
-            switch ($controller) {
-              case 'thanh-vien':
-                include('Controller/controller_user.php');
-                break;
-              default:
-                include('Controller/controller_list.php');
-            }
-    ?>
-
+          switch ($controller) {
+            case 'giao-vien':
+              include('Controller/Controller.php');
+              break;
+            default:
+              include('Controller/Controller_CBGV.php');
+          }
+  ?>
 </body>
